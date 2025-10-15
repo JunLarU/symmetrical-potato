@@ -182,10 +182,13 @@ CREATE TABLE `SustitucionesIngredientes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- NUEVA TABLA: Secciones del Menú
+-- TABLA: Secciones del Menú
 -- ============================================
 -- Esta tabla define las secciones que agrupan platillos
 -- Ejemplos: "Hamburguesas", "Tacos", "Ensaladas", "Desayunos Rápidos", etc.
+-- 
+-- NOTA: Si se desea auditoría más detallada, se podría agregar:
+-- - IDUsuarioCreador, FechaCreacion, IDUsuarioModificador, FechaModificacion
 -- ============================================
 CREATE TABLE `SeccionesMenu` (
   `ID` INT(11) NOT NULL AUTO_INCREMENT,
@@ -229,7 +232,7 @@ CREATE TABLE `SeccionesMenuProductos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- TABLA: Menú Semanal
+-- TABLA: Menú Semanal (MODIFICADA)
 -- ============================================
 -- Representa un día/horario específico del menú
 -- Cada registro es un "slot" donde se pueden asignar secciones
@@ -252,10 +255,14 @@ CREATE TABLE `MenuSemanal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- NUEVA TABLA: Secciones del Menú Semanal
+-- TABLA: Secciones del Menú Semanal (CON REGISTRO DE AUDITORÍA)
 -- ============================================
 -- Asigna secciones completas a días/horarios específicos
 -- Esta es la tabla CLAVE para la flexibilidad que necesitas
+-- 
+-- REGISTRO DE AUDITORÍA:
+-- - IDUsuarioAsigno: Quién asignó esta sección al menú
+-- - FechaAsignacion: Cuándo se asignó la sección
 -- 
 -- EJEMPLOS DE USO:
 -- - Lunes semana 1, Comida: Sección "Hamburguesas"
@@ -268,11 +275,15 @@ CREATE TABLE `MenuSemanalSecciones` (
   `IDMenuSemanal` INT(11) NOT NULL, -- El día/horario específico
   `IDSeccion` INT(11) NOT NULL, -- La sección que se muestra ese día/horario
   `Orden` INT(3), -- Orden si hay múltiples secciones en el mismo día/horario
+  `IDUsuarioAsigno` INT(11), -- Administrador que asignó esta sección
+  `FechaAsignacion` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`ID`),
   FOREIGN KEY (`IDMenuSemanal`) REFERENCES `MenuSemanal`(`ID`) ON DELETE CASCADE,
   FOREIGN KEY (`IDSeccion`) REFERENCES `SeccionesMenu`(`ID`) ON DELETE CASCADE,
+  FOREIGN KEY (`IDUsuarioAsigno`) REFERENCES `Usuarios`(`ID`) ON DELETE SET NULL,
   INDEX `idx_menu` (`IDMenuSemanal`),
   INDEX `idx_seccion` (`IDSeccion`),
+  INDEX `idx_usuario` (`IDUsuarioAsigno`),
   UNIQUE KEY `unique_menu_seccion` (`IDMenuSemanal`, `IDSeccion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -350,6 +361,47 @@ CREATE TABLE `Sesiones` (
   INDEX `idx_token` (`Token`),
   INDEX `idx_usuario` (`IDUsuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- ============================================
+-- NOTAS IMPORTANTES SOBRE AUDITORÍA
+-- ============================================
+-- 
+-- MANEJO DE IDUsuarioModificador:
+-- El campo IDUsuarioModificador en MenuSemanal debe actualizarse manualmente en tu código
+-- cuando un administrador modifica el menú. Ejemplo en PHP/Python/etc:
+-- 
+-- UPDATE MenuSemanal 
+-- SET IDUsuarioModificador = [ID_del_administrador_actual]
+-- WHERE ID = [ID_del_menu];
+-- 
+-- El campo FechaModificacion se actualiza automáticamente gracias a:
+-- ON UPDATE CURRENT_TIMESTAMP
+-- 
+-- TRIGGER OPCIONAL (para actualización automática del modificador):
+-- Si deseas que IDUsuarioModificador se actualice automáticamente,
+-- deberías crear un trigger, pero esto requiere guardar el ID del usuario
+-- en una variable de sesión de MySQL. Esto es más complejo y generalmente
+-- se maneja mejor desde la aplicación.
+-- 
+-- EJEMPLO DE TRIGGER (si lo deseas implementar):
+-- DELIMITER $
+-- CREATE TRIGGER before_menu_update
+-- BEFORE UPDATE ON MenuSemanal
+-- FOR EACH ROW
+-- BEGIN
+--   -- Obtener el ID de usuario de la sesión
+--   SET NEW.IDUsuarioModificador = @current_user_id;
+-- END$
+-- DELIMITER ;
+-- 
+-- Luego en tu código antes de hacer UPDATE:
+-- SET @current_user_id = [ID_del_administrador];
+-- 
+-- HISTORIAL COMPLETO:
+-- Para un historial más detallado de TODOS los cambios, usa la tabla
+-- HistorialCambios que registra los datos antes y después de cada modificación.
+-- 
+-- ============================================
 
 -- ============================================
 -- EJEMPLOS DE USO: SISTEMA DE TAMAÑOS
@@ -497,47 +549,50 @@ CREATE TABLE `Sesiones` (
 -- (1, 13, 4);  -- Hamburguesa Vegetariana
 
 -- ===== PASO 3: Crear entradas en MenuSemanal para días específicos =====
+-- NOTA: Ahora se requiere el IDUsuarioCreador (el administrador que crea el menú)
 
 -- --- SEMANA 1 (Lunes 14 Oct 2024 - Viernes 18 Oct 2024) ---
--- Lunes 14 Oct, Comida
--- INSERT INTO MenuSemanal (Fecha, DiaSemana, Horario, NumeroSemana, Anio) 
--- VALUES ('2024-10-14', 'Lunes', 'Comida', 42, 2024);
+-- Lunes 14 Oct, Comida - Creado por el usuario con ID 1
+-- INSERT INTO MenuSemanal (Fecha, DiaSemana, Horario, NumeroSemana, Anio, IDUsuarioCreador) 
+-- VALUES ('2024-10-14', 'Lunes', 'Comida', 42, 2024, 1);
 
 -- Asignar sección "Hamburguesas" al Lunes 14 Oct en Comida
--- INSERT INTO MenuSemanalSecciones (IDMenuSemanal, IDSeccion, Orden) 
--- VALUES (1, 1, 1);
+-- El administrador con ID 1 asigna esta sección
+-- INSERT INTO MenuSemanalSecciones (IDMenuSemanal, IDSeccion, Orden, IDUsuarioAsigno) 
+-- VALUES (1, 1, 1, 1);
 
 -- Martes 15 Oct - NO hay hamburguesas, puedes asignar otra sección o dejar vacío
 
 -- --- SEMANA 2 (Lunes 21 Oct 2024 - Viernes 25 Oct 2024) ---
--- Miércoles 23 Oct, Desayuno
--- INSERT INTO MenuSemanal (Fecha, DiaSemana, Horario, NumeroSemana, Anio) 
--- VALUES ('2024-10-23', 'Miércoles', 'Desayuno', 43, 2024);
+-- Miércoles 23 Oct, Desayuno - Creado por el usuario con ID 2
+-- INSERT INTO MenuSemanal (Fecha, DiaSemana, Horario, NumeroSemana, Anio, IDUsuarioCreador) 
+-- VALUES ('2024-10-23', 'Miércoles', 'Desayuno', 43, 2024, 2);
 
 -- Asignar sección "Hamburguesas" al Miércoles 23 Oct en Desayuno
--- INSERT INTO MenuSemanalSecciones (IDMenuSemanal, IDSeccion, Orden) 
--- VALUES (5, 1, 1);
+-- INSERT INTO MenuSemanalSecciones (IDMenuSemanal, IDSeccion, Orden, IDUsuarioAsigno) 
+-- VALUES (5, 1, 1, 2);
 
 -- --- SEMANA 3 (Lunes 28 Oct 2024 - Viernes 1 Nov 2024) ---
 -- Hamburguesas en COMIDA: Lunes, Miércoles, Viernes
--- INSERT INTO MenuSemanal (Fecha, DiaSemana, Horario, NumeroSemana, Anio) VALUES
--- ('2024-10-28', 'Lunes', 'Comida', 44, 2024),
--- ('2024-10-30', 'Miércoles', 'Comida', 44, 2024),
--- ('2024-11-01', 'Viernes', 'Comida', 44, 2024);
+-- Creados por el administrador con ID 1
+-- INSERT INTO MenuSemanal (Fecha, DiaSemana, Horario, NumeroSemana, Anio, IDUsuarioCreador) VALUES
+-- ('2024-10-28', 'Lunes', 'Comida', 44, 2024, 1),
+-- ('2024-10-30', 'Miércoles', 'Comida', 44, 2024, 1),
+-- ('2024-11-01', 'Viernes', 'Comida', 44, 2024, 1);
 
--- INSERT INTO MenuSemanalSecciones (IDMenuSemanal, IDSeccion, Orden) VALUES
--- (10, 1, 1),  -- Lunes 28 Comida
--- (11, 1, 1),  -- Miércoles 30 Comida
--- (12, 1, 1);  -- Viernes 1 Comida
+-- INSERT INTO MenuSemanalSecciones (IDMenuSemanal, IDSeccion, Orden, IDUsuarioAsigno) VALUES
+-- (10, 1, 1, 1),  -- Lunes 28 Comida
+-- (11, 1, 1, 1),  -- Miércoles 30 Comida
+-- (12, 1, 1, 1);  -- Viernes 1 Comida
 
 -- Hamburguesas en DESAYUNO: Martes, Jueves
--- INSERT INTO MenuSemanal (Fecha, DiaSemana, Horario, NumeroSemana, Anio) VALUES
--- ('2024-10-29', 'Martes', 'Desayuno', 44, 2024),
--- ('2024-10-31', 'Jueves', 'Desayuno', 44, 2024);
+-- INSERT INTO MenuSemanal (Fecha, DiaSemana, Horario, NumeroSemana, Anio, IDUsuarioCreador) VALUES
+-- ('2024-10-29', 'Martes', 'Desayuno', 44, 2024, 1),
+-- ('2024-10-31', 'Jueves', 'Desayuno', 44, 2024, 1);
 
--- INSERT INTO MenuSemanalSecciones (IDMenuSemanal, IDSeccion, Orden) VALUES
--- (13, 1, 1),  -- Martes 29 Desayuno
--- (14, 1, 1);  -- Jueves 31 Desayuno
+-- INSERT INTO MenuSemanalSecciones (IDMenuSemanal, IDSeccion, Orden, IDUsuarioAsigno) VALUES
+-- (13, 1, 1, 1),  -- Martes 29 Desayuno
+-- (14, 1, 1, 1);  -- Jueves 31 Desayuno
 
 -- ============================================
 -- CONSULTAS ÚTILES
@@ -605,6 +660,70 @@ CREATE TABLE `Sesiones` (
 -- WHERE m.NumeroSemana = 44 AND m.Anio = 2024
 -- ORDER BY m.Fecha, m.Horario, ms.Orden;
 
+-- === CONSULTAS DE AUDITORÍA ===
+
+-- Ver quién creó cada menú de una semana específica:
+-- SELECT m.Fecha, m.DiaSemana, m.Horario,
+--        u.Nombre as CreadorNombre, u.ApellidoPaterno as CreadorApellido,
+--        m.FechaCreacion
+-- FROM MenuSemanal m
+-- JOIN Usuarios u ON m.IDUsuarioCreador = u.ID
+-- WHERE m.NumeroSemana = 44 AND m.Anio = 2024
+-- ORDER BY m.Fecha, m.Horario;
+
+-- Ver menús creados por un administrador específico:
+-- SELECT m.Fecha, m.DiaSemana, m.Horario, m.NumeroSemana, m.Anio,
+--        m.FechaCreacion
+-- FROM MenuSemanal m
+-- WHERE m.IDUsuarioCreador = 1
+-- ORDER BY m.Fecha DESC;
+
+-- Ver historial completo de un menú (creación y modificaciones):
+-- SELECT m.Fecha, m.Horario,
+--        uc.Nombre as CreadorNombre, uc.ApellidoPaterno as CreadorApellido,
+--        m.FechaCreacion,
+--        um.Nombre as ModificadorNombre, um.ApellidoPaterno as ModificadorApellido,
+--        m.FechaModificacion
+-- FROM MenuSemanal m
+-- JOIN Usuarios uc ON m.IDUsuarioCreador = uc.ID
+-- LEFT JOIN Usuarios um ON m.IDUsuarioModificador = um.ID
+-- WHERE m.Fecha = '2024-10-28' AND m.Horario = 'Comida';
+
+-- Ver quién asignó cada sección a los menús:
+-- SELECT m.Fecha, m.DiaSemana, m.Horario,
+--        s.Nombre as Seccion,
+--        u.Nombre as AsignadoPor, u.ApellidoPaterno,
+--        ms.FechaAsignacion
+-- FROM MenuSemanal m
+-- JOIN MenuSemanalSecciones ms ON m.ID = ms.IDMenuSemanal
+-- JOIN SeccionesMenu s ON ms.IDSeccion = s.ID
+-- LEFT JOIN Usuarios u ON ms.IDUsuarioAsigno = u.ID
+-- WHERE m.NumeroSemana = 44 AND m.Anio = 2024
+-- ORDER BY m.Fecha, m.Horario, ms.Orden;
+
+-- Ver estadísticas de menús creados por administrador:
+-- SELECT u.Nombre, u.ApellidoPaterno,
+--        COUNT(m.ID) as MenusCreados,
+--        MIN(m.FechaCreacion) as PrimerMenu,
+--        MAX(m.FechaCreacion) as UltimoMenu
+-- FROM Usuarios u
+-- LEFT JOIN MenuSemanal m ON u.ID = m.IDUsuarioCreador
+-- WHERE u.Tipo = 'Administrador'
+-- GROUP BY u.ID, u.Nombre, u.ApellidoPaterno
+-- ORDER BY MenusCreados DESC;
+
+-- Ver menús modificados recientemente:
+-- SELECT m.Fecha, m.DiaSemana, m.Horario,
+--        uc.Nombre as Creador,
+--        um.Nombre as UltimoModificador,
+--        m.FechaModificacion
+-- FROM MenuSemanal m
+-- JOIN Usuarios uc ON m.IDUsuarioCreador = uc.ID
+-- LEFT JOIN Usuarios um ON m.IDUsuarioModificador = um.ID
+-- WHERE m.FechaModificacion IS NOT NULL
+-- ORDER BY m.FechaModificacion DESC
+-- LIMIT 20;
+
 -- ============================================
 -- VENTAJAS DEL SISTEMA
 -- ============================================
@@ -631,3 +750,14 @@ CREATE TABLE `Sesiones` (
 -- ✅ Manejo de opciones de leche sin tabla separada
 -- ✅ Costos adicionales personalizables
 -- ✅ Compatibilidad: No aparecen opciones incompatibles (ej: leche de vaca en bebidas veganas)
+
+-- === SISTEMA DE AUDITORÍA Y RASTREABILIDAD ===
+-- ✅ Registro de creación: Quién creó cada menú y cuándo
+-- ✅ Registro de modificación: Quién modificó cada menú y cuándo
+-- ✅ Registro de asignación: Quién asignó cada sección a cada menú
+-- ✅ Trazabilidad completa: Seguimiento de todos los cambios en el sistema
+-- ✅ Responsabilidad: Cada administrador es responsable de sus acciones
+-- ✅ Histórico detallado: Para análisis y reportes de gestión
+-- ✅ Consultas de auditoría: Fácil acceso a información de quién hizo qué
+-- ✅ Prevención de conflictos: Identificar rápidamente quién hizo cambios
+-- ✅ Integración con HistorialCambios: Sistema completo de auditoría
