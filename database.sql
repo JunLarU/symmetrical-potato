@@ -288,9 +288,9 @@ CREATE TABLE `MenuSemanalSecciones` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
--- TABLA: Bebida Especial de Viernes
+-- TABLA: Producto Especial
 -- ============================================
-CREATE TABLE `BebidasEspeciales` (
+CREATE TABLE `ProductosEspeciales` (
   `ID` INT(11) NOT NULL AUTO_INCREMENT,
   `IDProducto` INT(11) NOT NULL,
   `FechaInicio` DATE NOT NULL,

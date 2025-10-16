@@ -1,0 +1,32 @@
+.root {
+    background-color: linear-gradient(to bottom right, #e8f0ff, #d0e0ff);
+    font-family: "Segoe UI", sans-serif;
+}
+#login-signup {
+    width: 300;
+    margin: auto;
+    padding: 20;
+    background-color: white;
+    border-radius: 10;
+    box-shadow: 0 4 12 rgba(0, 0, 0, 0.1);
+}
+
+.login-signup__input {
+    background-radius: 6;
+    border-radius: 6;
+    border-color: #0078ff;
+    padding: 8 12;
+    font-size: 14px;
+}
+
+.login-signup__button {
+    background-color: #0078ff;
+    text-fill: white;
+    font-weight: bold;
+    background-radius: 8;
+    cursor: hand;
+}
+
+.login-signup__button:hover {
+    background-color: #005fcc;
+}
