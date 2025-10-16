@@ -2,6 +2,182 @@
 
 use Whis\Routing\Route;
 use App\Models\UserModel;
+use App\Models\IngredientModel;
+
+Route::post('/api/ingredients/all', function () {
+    header('Content-Type: application/json; charset=utf-8');
+    $data = json_decode(file_get_contents('php://input'), true);
+
+    if (json_last_error() !== JSON_ERROR_NONE || empty($data['expediente_admin'])) {
+        http_response_code(400);
+        echo json_encode(['success' => false, 'message' => 'Falta expediente_admin']);
+        return;
+    }
+
+    $admin = UserModel::firstWhere('Expediente', strtoupper(trim($data['expediente_admin'])));
+    if (!$admin || $admin->Tipo !== 'Administrador' || (int)$admin->Activo === 0) {
+        http_response_code(403);
+        echo json_encode(['success' => false, 'message' => 'Administrador no autorizado']);
+        return;
+    }
+
+    try {
+        $ingredientes = IngredientModel::allWithCategory();
+
+        http_response_code(200);
+        echo json_encode([
+            'success' => true,
+            'total' => count($ingredientes),
+            'ingredientes' => $ingredientes
+        ], JSON_UNESCAPED_UNICODE);
+    } catch (\Throwable $e) {
+        http_response_code(500);
+        echo json_encode([
+            'success' => false,
+            'message' => 'Error al obtener los ingredientes',
+            'error' => $e->getMessage()
+        ], JSON_UNESCAPED_UNICODE);
+    }
+});
+
+
+Route::post('/api/ingredients/search', function () {
+    header('Content-Type: application/json; charset=utf-8');
+    $data = json_decode(file_get_contents('php://input'), true);
+
+    if (json_last_error() !== JSON_ERROR_NONE || empty($data['expediente_admin']) || empty($data['query'])) {
+        http_response_code(400);
+        echo json_encode(['success' => false, 'message' => 'Datos incompletos']);
+        return;
+    }
+
+    $admin = UserModel::firstWhere('Expediente', strtoupper(trim($data['expediente_admin'])));
+    if (!$admin || $admin->Tipo !== 'Administrador' || (int)$admin->Activo === 0) {
+        http_response_code(403);
+        echo json_encode(['success' => false, 'message' => 'Administrador no autorizado']);
+        return;
+    }
+
+    try {
+        $result = IngredientModel::searchSafe($data['query']);
+        http_response_code(200);
+        echo json_encode([
+            'success' => true,
+            'total' => count($result),
+            'ingredientes' => $result
+        ], JSON_UNESCAPED_UNICODE);
+    } catch (\Throwable $e) {
+        http_response_code(500);
+        echo json_encode([
+            'success' => false,
+            'message' => 'Error al realizar la búsqueda',
+            'error' => $e->getMessage()
+        ], JSON_UNESCAPED_UNICODE);
+    }
+});
+
+Route::post('/api/ingredients/add', function () {
+    header('Content-Type: application/json; charset=utf-8');
+    $data = json_decode(file_get_contents('php://input'), true);
+
+    // === Validación básica del JSON ===
+    if (json_last_error() !== JSON_ERROR_NONE || empty($data)) {
+        http_response_code(400);
+        echo json_encode([
+            'success' => false,
+            'message' => 'JSON inválido o cuerpo vacío'
+        ], JSON_UNESCAPED_UNICODE);
+        return;
+    }
+
+    // === Verificar campos requeridos ===
+    $required = ['expediente_admin', 'nombre', 'categoria'];
+    foreach ($required as $field) {
+        if (!isset($data[$field]) || trim($data[$field]) === '') {
+            http_response_code(400);
+            echo json_encode([
+                'success' => false,
+                'message' => "Falta el campo requerido: $field"
+            ], JSON_UNESCAPED_UNICODE);
+            return;
+        }
+    }
+
+    // === Verificar administrador ===
+    $admin = UserModel::firstWhere('Expediente', strtoupper(trim($data['expediente_admin'])));
+    if (!$admin || $admin->Tipo !== 'Administrador' || (int)$admin->Activo === 0) {
+        http_response_code(403);
+        echo json_encode([
+            'success' => false,
+            'message' => 'Administrador no autorizado'
+        ], JSON_UNESCAPED_UNICODE);
+        return;
+    }
+
+    // === Buscar categoría ===
+    $driver = IngredientModel::getDatabaseDriver();
+    $catQuery = "SELECT ID FROM CategoriasIngredientes WHERE Nombre = :nombre LIMIT 1;";
+    $catResult = $driver->statement($catQuery, [':nombre' => trim($data['categoria'])]);
+
+    if (!$catResult || count($catResult) === 0) {
+        http_response_code(400);
+        echo json_encode([
+            'success' => false,
+            'message' => 'La categoría especificada no existe'
+        ], JSON_UNESCAPED_UNICODE);
+        return;
+    }
+
+    $idCategoria = (int)$catResult[0]['ID'];
+
+    // === Validar valores opcionales ===
+    $descripcion = isset($data['descripcion']) ? trim($data['descripcion']) : null;
+    $calorias = isset($data['calorias']) ? floatval($data['calorias']) : null;
+    $alergeno = isset($data['alergeno']) ? intval($data['alergeno']) : 0;
+
+    // === Evitar duplicados por nombre ===
+    $existente = IngredientModel::firstWhere('Nombre', trim($data['nombre']));
+    if ($existente) {
+        http_response_code(409);
+        echo json_encode([
+            'success' => false,
+            'message' => 'Ya existe un ingrediente con ese nombre'
+        ], JSON_UNESCAPED_UNICODE);
+        return;
+    }
+
+    // === Inserción ===
+    try {
+        $driver->statement(
+            "INSERT INTO Ingredientes (Nombre, IDCategoria, Descripcion, Calorias, Alergeno) 
+             VALUES (:nombre, :idcat, :desc, :cal, :alerg)",
+            [
+                ':nombre' => ucwords(trim($data['nombre'])),
+                ':idcat'  => $idCategoria,
+                ':desc'   => $descripcion,
+                ':cal'    => $calorias,
+                ':alerg'  => $alergeno
+            ]
+        );
+
+        // Obtener el último ID insertado
+        $idNuevo = $driver->lastInsertedId();
+
+        http_response_code(201);
+        echo json_encode([
+            'success' => true,
+            'message' => 'Ingrediente agregado correctamente',
+            'id' => intval($idNuevo)
+        ], JSON_UNESCAPED_UNICODE);
+    } catch (\Throwable $e) {
+        http_response_code(500);
+        echo json_encode([
+            'success' => false,
+            'message' => 'Error interno al registrar el ingrediente',
+            'error' => $e->getMessage()
+        ], JSON_UNESCAPED_UNICODE);
+    }
+});
 
 Route::post('/api/users/signup', function () {
     header('Content-Type: application/json; charset=utf-8');

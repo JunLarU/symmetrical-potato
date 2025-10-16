@@ -88,20 +88,17 @@ public class LoginController {
     private void abrirVentanaPrincipal() {
 
         if (SessionManager.getInstance().isAdmin()) {
-            System.out.println("👑 Usuario administrador: " + SessionManager.getInstance().get("Nombre"));
-        } else {
-            System.out.println("🙋 Usuario normal: " + SessionManager.getInstance().get("Nombre"));
-        }
-
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/app/views/TEST.fxml"));
-            Parent root = loader.load();
-
-            Stage stage = (Stage) btnLogin.getScene().getWindow();
-            stage.setScene(new Scene(root, 600, 500));
-            stage.setTitle("CAFI – Panel Principal");
-        } catch (Exception e) {
-            e.printStackTrace();
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/app/views/DashboardAdmin.fxml"));
+                Parent root = loader.load();
+                Stage stage = (Stage) btnLogin.getScene().getWindow();
+                stage.setScene(new Scene(root, 1000, 650));
+                stage.setTitle("CAFI – Panel Administrador");
+                stage.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            
         }
     }
 }

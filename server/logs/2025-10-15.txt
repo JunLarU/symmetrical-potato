@@ -629,3 +629,533 @@ Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-cor
 Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
 
 
+	2025-10-15 21:41:34: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 21:42:57: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 21:45:01: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 21:45:21: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 21:48:26: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:10:13: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:10:15: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:20:08: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:20:11: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:50:20: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:50:24: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:50:50: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:18: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:20: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:27: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:29: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:29: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:29: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:31: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:33: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:34: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:34: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:37: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:37: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:40: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:40: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:42: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:43: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:54:45: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:04: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:07: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:12: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:13: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:15: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:19: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:20: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:21: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:21: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:22: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:23: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:24: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:24: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:26: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:29: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:31: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:31: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:32: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:32: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:33: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:36: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:36: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:55:42: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+
+	2025-10-15 22:57:36: TypeError by 127.0.0.1
+Uncaught exception: 'TypeError' with message 'Whis\Routing\Router::runMiddlewares(): Return value must be of type Whis\Http\Response, null returned'
+Stack trace: #0 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php(86): Whis\Routing\Router->runMiddlewares(Object(Whis\Http\Request), Array, Object(Closure))
+#1 E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\App.php(144): Whis\Routing\Router->resolve(Object(Whis\Http\Request))
+#2 E:\F07_SOFTWARES\S11_FITACATEAPP\server\public\index.php(8): Whis\App->run()
+#3 E:\F07_SOFTWARES\S11_FITACATEAPP\server\index.php(23): require_once('E:\\F07_SOFTWARE...')
+#4 {main}
+Thrown in 'E:\F07_SOFTWARES\S11_FITACATEAPP\server\vendor\junlar11\whis-core\src\Routing\Router.php' on line 101
+
+

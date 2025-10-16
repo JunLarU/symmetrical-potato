@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="app.controllers.admin.IngredientesController"
+            prefWidth="950" prefHeight="600"
+            style="-fx-background-color: #F9FAFB;">
+
+    <!-- 🔍 Barra superior -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 15;">
+            <Label text="🥦 Ingredientes"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="txtBuscar" promptText="Buscar ingrediente..."
+                       style="-fx-pref-width: 300px; -fx-background-radius: 6;"/>
+            <Button fx:id="btnRecargar" text="🔄" onAction="#onRecargarClicked"
+                    style="-fx-background-color: #27AE60; -fx-text-fill: white; -fx-background-radius: 6;"/>
+            <Button fx:id="btnNuevo" text="➕ Nuevo" onAction="#onNuevoIngredienteClicked"
+                    style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 6;"/>
+        </HBox>
+    </top>
+
+    <!-- 📋 Tabla -->
+    <center>
+        <VBox spacing="10" style="-fx-padding: 15;">
+            <TableView fx:id="tablaIngredientes" prefHeight="500"
+                       style="-fx-background-radius: 6;">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+                    <TableColumn fx:id="colNombre" text="Nombre" prefWidth="180"/>
+                    <TableColumn fx:id="colCategoria" text="Categoría" prefWidth="140"/>
+                    <TableColumn fx:id="colDescripcion" text="Descripción" prefWidth="230"/>
+                    <TableColumn fx:id="colCalorias" text="Calorías" prefWidth="80"/>
+                    <TableColumn fx:id="colAlergeno" text="Alergeno" prefWidth="80"/>
+
+                    <!-- 🔧 Nueva columna de acciones -->
+                    <TableColumn fx:id="colAcciones" text="Acciones" prefWidth="130"/>
+                </columns>
+            </TableView>
+
+            <Label fx:id="lblEstado" text="Cargando ingredientes..."
+                   style="-fx-font-size: 14px; -fx-text-fill: #555;"/>
+        </VBox>
+    </center>
+</BorderPane>
